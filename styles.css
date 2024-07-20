@@ -52,4 +52,14 @@ h1 {
 .service-title {
     font-size: 18px;
     font-weight: bold;
+    margin-top: 10px;
+}
+
+.service-logo {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
 }
