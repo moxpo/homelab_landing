@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="icons/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="devops-title"></h1> <!-- Changed the id to "devops-title" -->
+        <div class="services">
+            <a href="http://192.168.1.115:8088" class="service-box">
+                <img src="icons/gitlab_logo.png" alt="GitLab Logo" class="service-logo">
+                <div class="service-title">GitLab</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const title = "DevOps Services";
+            const typingSpeed = 150; 
+            let index = 0;
+
+            function type() {
+                if (index < title.length) {
+                    document.getElementById('devops-title').innerHTML += title.charAt(index);
+                    index++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(() => {
+                        document.getElementById('devops-title').classList.remove('blinking-cursor');
+                    }, typingSpeed * 2);
+                }
+            }
+
+            // Clear the title content to prevent overlap
+            document.getElementById('devops-title').innerHTML = '';
+            type();
+        });
+    </script>
+</body>
+
+</html>
+
